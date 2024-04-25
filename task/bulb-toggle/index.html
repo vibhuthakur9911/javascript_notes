@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="img/off.gif" alt="" id="bulb">
+    <button id="btn">Turn on</button>
+    <script>
+        let bulb = document.getElementById('bulb');
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', toggleBtn)
+        function toggleBtn(e) {
+            if (btn.textContent.includes('off')) {
+                bulb.src = 'img/off.gif';
+                btn.textContent = 'Turn on'
+            } else {
+                bulb.src = 'img/on.gif';
+                btn.textContent = 'Turn off'
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

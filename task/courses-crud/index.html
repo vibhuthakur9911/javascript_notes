@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form action=""> -->
+    <div class="input">
+        <input type="text" id="add_chapter" placeholder="Add Chapter">
+    </div>
+    <button id="add_btn">Add</button>
+
+    <ul id="lis">
+        <li class="my-list">Chapter 1 <button>Edit</button>
+            <button onclick="removeChapter(this)">Delete</button>
+        </li>
+    </ul>
+    <!-- </form> -->
+
+    <script>
+        let add_btn = document.getElementById('add_btn');
+        add_btn.addEventListener('click', addChapter);
+
+        let chapters = document.getElementById('lis');
+        function addChapter(e) {
+            // for remove empty message
+
+            let currentBtn = e.currentTarget;
+            // let currentInput = currentBtn.previousElementChild;
+            // console.log(currentInput)
+            // let add_chapter = document.getElementById('add_chapter');
+
+            // let newLi = document.createElement('li');
+            // newLi.className = 'list'; // Can add Class Either way 
+            // newLi.classList.add = 'list'   ----- Same as above line of code
+            // newLi.textContent = add_chapter.value
+
+            // let chapters = document.getElementById('lis');
+            // chapters.appendChild(newLi);
+
+            let add_chapter = document.getElementById('add_chapter')
+            // console.log(add_chapter.value)
+            if (chapters.children[0].className == 'msg' && add_chapter.value != '') {
+                chapters.children[0].remove()
+            }
+
+
+            if (add_chapter.value != '') {
+
+                let newLi = document.createElement('li');
+                newLi.classList.add('my-list');
+                let chapter_name = add_chapter.value
+                // newLi.textContent = ;
+                newLi.innerHTML = ` <h3>${chapter_name}</h3>
+                <button onclick = 'editChapter(this)'>Edit</button>
+                <button onclick = 'removeChapter(this)'>Delete</button>`
+                chapters.appendChild(newLi)
+
+            } else {
+                alert('Enter a valid value');
+            }
+        }
+        function removeChapter(currentChapt) {
+            currentChapt.parentElement.remove();
+            if (chapters.children.length <= 0) {
+                let msg = document.createElement('div')
+                msg.className = 'msg';
+                msg.textContent = 'Nothing to see !'
+                chapters.appendChild(msg)
+                // msg.parentElement.replaceWith(msg);
+            }
+        }
+        function editChapter(currentElement) {
+            console.log(currentElement.previousElementSibling);
+            if (currentElement.textContent == 'Done') {
+                let currentChapter = currentElement.previousElementSibling.value
+                let currentHeading = document.createElement('h3');
+                currentHeading.textContent = currentChapter;
+                currentElement.textContent = 'edit'
+                // replace the button with input field
+                currentElement.previousElementSibling.replaceWith(currentHeading);
+            } else {
+
+                let currentChapter = currentElement.previousElementSibling.textContent
+                let currentInput = document.createElement('input');
+                currentInput.value = currentChapter;
+                currentInput.type = 'text';
+                currentInput.placeholder = 'Chapter Name';
+                currentInput.className = 'text';
+                currentElement.textContent = 'Done';
+                // replace the button with input field
+                currentElement.previousElementSibling.replaceWith(currentInput);
+            }
+        }
+    </script>
+</body>
+
+</html>
