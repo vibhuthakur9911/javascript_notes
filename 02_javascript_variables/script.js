@@ -13,6 +13,10 @@ name = "Thakur"; // Variable 'name' reassigned // I can be reassig
 
 var age = 23; // Using var (older approach)
 var age = 24; // We can redeclare  it, also change the value of  the previous one;
+/*
+Prefer not to use var
+because of issue in block scope functional scope 
+*/
 
 // Outputting variables
 console.log("PI:", PI); // Output: PI: 3.14
