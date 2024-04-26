@@ -1,16 +1,22 @@
 // Variables in JavaScript are containers for storing data values. They are declared using keywords like let, const, or var.
 
 // Declaring variables
-let name = "John"; // Using let for mutable variables
-const PI = 3.14; // Using const for constants
-var age = 30; // Using var (older approach)
+const PI = 3.14; // Using consxt for constant
+// PI = 14.3;  //  Error: Assignment to a constant variable #it will throw an error because we neighter  redeclare const variable nor  change the value...
+
+let name = "Vaibhav"; // Using let for mutable variables
 
 // Reassigning values
-name = "Jane"; // Variable 'name' reassigned
+name = "Thakur"; // Variable 'name' reassigned // I can be reassig
+
+// let name =""; //Cannot redeclare block-scoped variable 'name' #it will throw an error.
+
+var age = 23; // Using var (older approach)
+var age = 24; // We can redeclare  it, also change the value of  the previous one;
 
 // Outputting variables
-console.log("Name:", name); // Output: Name: Jane
 console.log("PI:", PI); // Output: PI: 3.14
+console.log("Name:", name); // Output: Name: Jane
 console.log("Age:", age); // Output: Age: 30
 
 // Variables declared with let and var are mutable, meaning their values can be changed.
