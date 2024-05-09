@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Clock</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+        * {
+            font-family: "MuseoModerno", sans-serif;
+            font-family: "Rubik Doodle Shadow", system-ui;
+        }
+
+        .main-div {
+            height: 100vh;
+            margin: 0;
+            background: radial-gradient(#4e4e4e, black);
+        }
+
+        .clock-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+        }
+
+        div#clock {
+            font-size: 44px;
+            font-weight: 500;
+            color: #0dbd19;
+            text-shadow: 0 0 23px #05ad10;
+            position: relative;
+            border: 8px solid #1d8207;
+            /* border-top: 34px solid #000; */
+            padding: 39px;
+            background: #6262624f;
+            backdrop-filter: blur(26px);
+            border-radius: 91px;
+            transform: perspective(500px) rotateY(8deg);
+            box-shadow: -6px -6px 0 4px #165309, inset 0 0 20px 5px #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        setInterval(() => {
+            const clock = new Date();
+            let hr = clock.getHours()
+            let min = clock.getMinutes();
+            let sec = clock.getSeconds();
+            let session = 'AM';
+            let tie = "";
+            if (hr > 12) {
+                hr = hr - 12
+                session = 'Pm'
+            }
+            hr = (hr < 10) ? '0' + hr : hr;
+            min = (min < 10) ? '0' + min : min;
+            sec = (sec < 10) ? '0' + sec : sec;
+            tie = document.getElementById("clock").innerHTML = `<span class='time hr'>${hr} </span> <span class="dots">:</span> <span class='time min'>${min}</span> <span class="dots">: </span> <span class='time hr'>${sec} </span> ${session}`;
+        }, 1000);
+    </script>
+</body>
+
+</html>
