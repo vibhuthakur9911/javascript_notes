@@ -28,6 +28,17 @@ console.log(createDate.getTime()); // Values in Mili second
 console.log(Math.floor(Date.now()/1000)); // convert in seconds
 
 let newDate = new Date();
+
+
+setInterval(() =>{
+    const clock = new Date();
+    let hr = clock.getHours()
+    let min = clock.getMinutes();
+    let sec = clock.getSeconds();
+    let mili = clock.getMilliseconds();
+    document.getElementById('demo').innerHTML = `${hr}: ${min}: ${sec} : ${mili}`;
+},1)
+
 console.log(newDate.getDate());
 console.log(newDate.getDay());
 console.log(newDate.getFullYear());
@@ -39,3 +50,6 @@ let newCreatedDate = createDate.toLocaleDateString('default', {
     weekday: 'long'
 })
 console.log(newCreatedDate)
+
+
+
