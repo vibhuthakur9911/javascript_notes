@@ -73,3 +73,39 @@ let user_new = {
 };
 
 console.log(user_new[id]); // Output: 123
+
+const obj1 = {1: 'a', 2: 'a'}
+const obj2 = {3: 'a', 4: 'b'}
+const obj3 = {5: 'a', 6: 'b'}
+
+// const obj4 = {obj1, obj2, obj3} //  this is not a correct method
+
+// const obj4 = Object.assign({}, obj1, obj2, obj3);
+// variable obj4m = Object.assign(targeted: {}, Source: Any object)
+// console.log(obj4);
+
+const obj4 = {...obj1, ...obj2, ...obj3}
+console.log(obj4);
+
+let twitter_user = {
+     id: "1",
+     userName : "vibhuvibes",
+     fullname : "Vaibhav Thakur",
+     email: "vaibhavthakur9911@gmail.com",
+     isLoggedIn : true
+}
+
+console.log(twitter_user);
+
+console.log(Object.keys(twitter_user)[0]) // Access the particular key of an object
+console.log(Object.keys(twitter_user)[1])
+console.log(Object.keys(twitter_user)[2])
+console.log(Object.keys(twitter_user)) // Access the key into Array form
+
+// same as we can also access the value of an Object
+
+console.log(Object.values(twitter_user)[0]);
+console.log(Object.values(twitter_user)[1]);
+console.log(Object.values(twitter_user)[2]);
+console.log(Object.values(twitter_user));
+
