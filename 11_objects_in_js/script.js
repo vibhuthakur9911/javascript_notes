@@ -67,7 +67,7 @@ let user = {
 let id = Symbol('id');
 let user_new = {
     name: 'Vaibhav',
-    // id : 123, // This i not a correct way 
+    // id : 123, // This is not a correct way 
     [id]: 123 // Using symbol as a property key
 
 };
