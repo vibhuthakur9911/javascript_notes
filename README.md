@@ -62,6 +62,9 @@ To get started with these JavaScript notes, simply browse through the table of c
 19. [Switch Statement](https://github.com/vibhuthakur9911/javascript_notes/tree/main/18_switch_statement_in_Js)
 20. [Iteration in JavaScript](https://github.com/vibhuthakur9911/javascript_notes/tree/main/19_iteration_in_Js)
 21. [While and Do While Loop](https://github.com/vibhuthakur9911/javascript_notes/tree/main/20_while_and_do_while_loop_in_Js)
+22. [While and Do While Loop](https://github.com/vibhuthakur9911/javascript_notes/tree/main/21_for_of_loops_in_Js)
+23. [While and Do While Loop](https://github.com/vibhuthakur9911/javascript_notes/tree/main/22_for_in_loop_in_Js)
+24. [While and Do While Loop](https://github.com/vibhuthakur9911/javascript_notes/tree/main/23_foreach_in_js)
 
 Feel free to explore each section for detailed explanations and examples. Happy coding! 🖥️💻
 
