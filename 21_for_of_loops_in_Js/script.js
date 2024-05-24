@@ -49,6 +49,8 @@ for (const [key, value] of map) {
   console.log(key, " :- ", value);
 }
 
+// Accessing Object
+
 const animeCharacter = {
   naruto: "Itachi Uchiha",
   onePiece: "Monkey D. Luffy",
