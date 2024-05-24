@@ -1,9 +1,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/vibhuthakur9911/javascript_notes">
-    <img src="https://raw.githubusercontent.com/vibhuthakur9911/javascript_notes/main/assets/javascript_logo.png" alt="Logo" width="200" height="200">
-  </a>
 
   <h1 align="center">JavaScript Notes</h1>
 
@@ -12,10 +9,6 @@
     <br />
     <a href="https://github.com/vibhuthakur9911/javascript_notes"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/vibhuthakur9911/javascript_notes/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/vibhuthakur9911/javascript_notes/issues">Request Feature</a>
   </p>
 </p>
 
@@ -24,7 +17,7 @@
 
 - [About the Project](#about-the-project)
 - [Getting Started](#getting-started)
-- [JavaScript Notes Table of Contents](#js-notes-table-of-contents)
+- [JavaScript Notes Table of Contents](#javascript-notes-table-of-contents)
 - [Contributing](#contributing)
 <!-- ABOUT THE PROJECT -->
 ## About The Project
