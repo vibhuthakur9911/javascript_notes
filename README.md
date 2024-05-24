@@ -24,7 +24,7 @@
 
 - [About the Project](#about-the-project)
 - [Getting Started](#getting-started)
-- [JavaScript Notes Table of Contents](#js-table-of-contents)
+- [JavaScript Notes Table of Contents](#js-notes-table-of-contents)
 - [Contributing](#contributing)
 <!-- ABOUT THE PROJECT -->
 ## About The Project
