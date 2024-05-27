@@ -14,7 +14,8 @@ Ans: `this` refers to the object that is currently executing the code. Its value
 Q: What are the differences between var, let, and const?
 
 Ans: var is function-scoped, let and const are block-scoped. const is also read-only, meaning its value cannot be reassigned after initialization.
--------------------------
+
+--------------------------
 ``` js
 var num =  20;
 var num = 50;
@@ -31,6 +32,7 @@ let name = "Nitin"
 const PI = 3.14;
 // its value cannot be reassigned.
 ```
+----------------------------
 Q: What is event delegation?
 
 Ans: Event delegation is a technique of using a single event listener to manage all events of a particular type on multiple elements within a parent.
@@ -265,6 +267,7 @@ console.log(name + ", " + age);
 ```js
 
 console.log(0.1 + 0.2 === 0.3);
+// Ans: false
 
 ```
 
@@ -287,4 +290,35 @@ function outer() {
 const myClosure = outer();
 myClosure();  // Outputs: "I am from outer function!" and "I am from inner function!"
 
+```
+---------------------------
+``` js
+// Guess the output
+
+let a = {};
+let b = { key: "b" };
+let c = { key: "c" };
+
+a[b] = 123;
+a[c] = 456;
+
+console.log(a[b]);
+
+//Ans: 456
+
+```
+---------------------------
+[!NOTE]
+In this code, a is an empty object that is being assigned properties using the square bracket notation. The values of the properties are being set to the numbers 123 and 456. The keys of the properties are the objects b and c.
+
+When the console.log statement is executed, it logs the value of the property of a whose key is the object b. In this case, the value of this property is 456, because the value of the property was last set to 456 when the object c was used as the key.
+
+This behavior occurs because when objects are used as keys in an object, the object's default behavior is to convert the object to a string representation. In this case, both b and c are converted to the string [object Object], which means that they both end up being used as the same key in the a object. As a result, the value of the property that is set using the object c as the key overwrites the value of the property that was set using the object b as the key.
+
+So the object a looks like -
+-----------------------
+``` js
+{
+    "[object Object]": 456
+}
 ```
