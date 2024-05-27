@@ -64,8 +64,3 @@ const animeCharacter = {
 Object.keys(animeCharacter).forEach((key) => {
   console.log(`${key}: ${animeCharacter[key]}`);
 });
-
-// Output:
-// name: John
-// age: 30
-// city: New York
