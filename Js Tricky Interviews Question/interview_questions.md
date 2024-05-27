@@ -1,4 +1,4 @@
-<h2>** 50 tricky JavaScript interview questions ** along with brief explanations to help you prepare for interviews:</h2>
+<h2><b> 50 tricky JavaScript interview questions </b> along with brief explanations to help you prepare for interviews:</h2>
 
 Q: What is the difference between == and === in JavaScript?
 
