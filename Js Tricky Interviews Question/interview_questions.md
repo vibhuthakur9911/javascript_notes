@@ -1,21 +1,36 @@
-<h2>50 tricky JavaScript interview questions along with brief explanations to help you prepare for interviews:</h2>
+<h2>** 50 tricky JavaScript interview questions ** along with brief explanations to help you prepare for interviews:</h2>
 
 Q: What is the difference between == and === in JavaScript?
 
 Ans: == checks for equality with type coercion, while === checks for equality without type coercion (strict equality).
 
-Q: Explain the concept of closures in JavaScript.
+Q: What will `[2] == [2]` return and why?
+Ans: This expression will return false. This is because, in Javascript, arrays are objects and objects are compared by reference, not by value. Each array literal creates a new reference, so they are not equal, even if their contents are the same.
 
-Ans: A closure is a function that retains access to its lexical scope even when the function is executed outside that scope.
+Q: What is the purpose of the `this` keyword in JavaScript?
 
-Q: What is the purpose of the this keyword in JavaScript?
-
-Ans: this refers to the object that is currently executing the code. Its value can change depending on the context of execution.
+Ans: `this` refers to the object that is currently executing the code. Its value can change depending on the context of execution.
 
 Q: What are the differences between var, let, and const?
 
 Ans: var is function-scoped, let and const are block-scoped. const is also read-only, meaning its value cannot be reassigned after initialization.
+-------------------------
+``` js
+var num =  20;
+var num = 50;
+num = 70;
+// Var in function scoped.
 
+let name = "Vaibhav";
+name = "Vibhu"
+// let has reassigned the value but can't redeclare.
+let name = "Nitin"
+
+// It will throw an error.
+
+const PI = 3.14;
+// its value cannot be reassigned.
+```
 Q: What is event delegation?
 
 Ans: Event delegation is a technique of using a single event listener to manage all events of a particular type on multiple elements within a parent.
@@ -27,6 +42,26 @@ Ans: Every JavaScript object has a prototype property that points to another obj
 Q: What is the difference between call, apply, and bind?
 
 Ans: call and apply invoke a function with a specified this context; call takes arguments as a list, apply takes them as an array. bind returns a new function with a bound this context and specified arguments.
+
+Q: What does the `.bind()` method do?
+Ans: The `.bind()` method creates a new function that, when called, has its `this` keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called. This is tricky because it involves understanding how the this keyword works and how it can be explicitly set.
+
+---------------------------
+``` js 
+const obj = {
+  x: 42,
+  getX: function() {
+    return this.x;
+  }
+};
+
+const unboundGetX = obj.getX;
+console.log(unboundGetX());  // Output: undefined
+
+const boundGetX = unboundGetX.bind(obj);
+console.log(boundGetX());  // Output: 42
+```
+---------------------------
 
 Q: What is a promise in JavaScript?
 
@@ -223,4 +258,33 @@ const myObj = {
 console.log(name + ", " + age);
 
 // Ans : Vaibhav 22
+```
+
+------------------------------------
+
+```js
+
+console.log(0.1 + 0.2 === 0.3);
+
+```
+
+Q: Can you explain closures with an example?
+Ans: A closure is a function that has access to its own scope, the scope of the outer function and the global scope. This often confuses people who are new to JavaScript because it behaves differently than other programming languages in this respect.
+
+``` js 
+function outer() {
+  let outerVar = "I am from outer function!";
+  
+  function inner() {
+    let innerVar = "I am from inner function!";
+    console.log(outerVar);  // I can access outerVar!
+    console.log(innerVar);  // I can access innerVar!
+  }
+  
+  return inner;
+}
+
+const myClosure = outer();
+myClosure();  // Outputs: "I am from outer function!" and "I am from inner function!"
+
 ```
