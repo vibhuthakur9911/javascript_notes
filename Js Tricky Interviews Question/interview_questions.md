@@ -199,3 +199,28 @@ Ans: forEach executes a function on each array element but does not return a new
 Q: What is the difference between innerHTML and textContent?
 
 Ans: innerHTML sets or returns the HTML content of an element, allowing HTML parsing. textContent sets or returns the text content, ignoring HTML tags.
+
+
+```js
+//  Guess the output.
+const num = 10; 
+function myfunc() { 
+   console.log(num);  
+   const num = 20; 
+} 
+
+myfunc();
+// Ans: Reference Error
+```
+--------------------------------
+``` js
+// Guess the output of the following code.
+const myObj = { 
+  name: "John",
+   age: 30
+}; 
+ const {name, age } = obj; 
+console.log(name + ", " + age);
+
+// Ans : Vaibhav 22
+```
