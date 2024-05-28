@@ -50,3 +50,43 @@ let userBooks = books.filter((book_specs) => {
 });
 
 console.log(userBooks);
+
+// map() method in Javascript
+
+// The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+const mapNumb = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Explicit or multi line
+let new_mapNumb = mapNumb.map((number) => {
+  return number * 2;
+});
+
+console.log(new_mapNumb);
+// Implicit or single line
+
+new_mapNumb = mapNumb.map((number) => number ** 2);
+console.log(new_mapNumb);
+
+// ## Key Points
+// Non-mutating: map() does not change the original array; it returns a new array.
+// Element Count: The new array will have the same number of elements as the original array.
+// Transformation: Often used to transform data or apply a function to each element.
+
+// ## Limitations and Boundaries
+// Side Effects: Although the callback can have side effects, it is generally used for pure transformations (no side effects).
+// Sparse Arrays: If the array is sparse (has gaps), map() will skip the gaps in the returned array.
+// Performance: Creates a new array; for large datasets, consider the performance implications.
+// Non-Nested Arrays: map() is not suitable for flattening nested arrays (use flatMap() or other methods for that).
+
+// ! Note
+// Chaining: Can be chained with other array methods like filter(), reduce(), etc.
+
+const numbers = [1, 2, 3, 4, 5];
+const evenDoubledNumbers = numbers
+  .filter((num) => num % 2 === 0)
+  .map((num) => num * 2);
+console.log(evenDoubledNumbers);
+
+// Immutability: Encourages a functional programming style by promoting immutability.
+// Compatibility: Widely supported in all modern browsers and environments.
