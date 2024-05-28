@@ -42,6 +42,7 @@ map.set("IN", "India");
 map.set("UK", "United Kindom");
 map.set("USA", "United States of America");
 map.set("FR", "France");
+map.set("IN", "India"); //the last value passed is the one that is retained.
 
 // console.log(map);
 
