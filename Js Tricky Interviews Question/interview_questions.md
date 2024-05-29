@@ -322,3 +322,24 @@ So the object a looks like -
     "[object Object]": 456
 }
 ```
+-----------------------
+```js
+// Guess the output
+
+var x = 23;
+(function(){
+
+  var x = 43;
+    (function random(){
+      x++;
+      console.log(x)
+      var x = 21;
+    })();
+
+})()
+// Ans: NaN
+
+/* The console.log(x) inside random() prints NaN because x is hoisted and declared as undefined before being 
+ncremented. Then, a new x is declared inside random() but doesn't affect the outer x.*/
+```
+----
