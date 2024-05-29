@@ -90,3 +90,52 @@ console.log(evenDoubledNumbers);
 
 // Immutability: Encourages a functional programming style by promoting immutability.
 // Compatibility: Widely supported in all modern browsers and environments.
+
+// reduce() Method in JavaScript
+
+//The reduce() method executes a reducer function on each element of the array, resulting in a single output value.
+{
+  const numbers = [1, 2, 3, 4, 5];
+
+  // Sum of all numbers
+  const sum = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  console.log(sum);
+
+  // Product of all numbers
+  const product = numbers.reduce(
+    (accumulator, currentValue) => accumulator * currentValue,
+    1
+  );
+  console.log(product);
+}
+
+// Single Value: reduce() returns a single value, which can be of any type (number, string, object, etc.).
+// Initial Value: It's good practice to provide an initial value to avoid unexpected results, especially with empty arrays.
+
+// # Complexity: The reduce() method can be harder to understand and use correctly compared to simpler array methods like map() and filter().
+// # Initial Value: Not providing an initial value can lead to errors or unexpected results, particularly with empty arrays.
+// # Performance: For very large arrays, reduce() operations can become slow, especially if the reducer function is complex.
+// # Debugging: Debugging can be more challenging since reduce() involves a single callback that processes all elements.
+
+//! Notes
+
+// Handling Empty Arrays: Always consider how reduce() should handle empty arrays, and provide an appropriate initial value to prevent errors.
+
+const emptyArray = [];
+const sum = emptyArray.reduce((acc, val) => acc + val, 0); // Safe with initial value
+console.log(sum); // Output: 0
+
+// Nested Data: reduce() can be combined with other array methods to handle more complex data transformations.
+
+const data = [
+  { name: "Vaibhav", age: 24 },
+  { name: "Prince", age: 30 },
+  { name: "Shubham", age: 26 },
+];
+
+const sumOfAge = data.reduce((acc, person) => acc + person.age, 0);
+
+console.log(sumOfAge);
