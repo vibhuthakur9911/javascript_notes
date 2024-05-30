@@ -65,6 +65,78 @@ console.log(boundGetX());  // Output: 42
 ```
 ---------------------------
 
+Q:What will be logged to the console after 1 second?
+---------------------------
+``` js 
+for (var i = 0; i < 3; i++) {
+  setTimeout(function() {
+    console.log(i);
+  }, 1000);
+}
+```
+---------------------------
+
+Ans : This question tests your understanding of closures and the var keyword in JavaScript. When var is used, the variable i is function-scoped, not block-scoped. The setTimeout function creates a closure that captures the variable i. Since i is function-scoped, each timeout refers to the same i, which will be 3 after the loop finishes. Therefore, the output will be:
+
+---------------------------
+``` js 
+3
+3
+3
+```
+---------------------------
+
+Q: What will be the output of each console.log statement?
+
+---------------------------
+``` js 
+const array = [1, 2, 3];
+array[10] = 99;
+console.log(array.length);
+console.log(array[6]);
+```
+---------------------------
+
+Ans: This question tests your understanding of JavaScript arrays and how they handle sparse arrays.
+
+=> array[10] = 99; sets the 11th element of the array to 99. JavaScript arrays are zero-indexed, so this effectively creates a sparse array with undefined values from index 3 to 9.<br>
+=> console.log(array.length); logs the length of the array. Since the last assigned index is 10, the length of the array will be 11.<br>
+=> console.log(array[6]); logs the value at index 6, which was never assigned, so it will be undefined.<br>
+
+---------------------------
+``` js 
+11
+undefined
+```
+---------------------------
+
+Q: What will be the output of each console.log statement?
+
+---------------------------
+``` js 
+console.log(0 == '0');
+console.log(0 === '0');
+console.log(null == undefined);
+console.log(null === undefined);
+```
+---------------------------
+
+Ans: This question tests your understanding of type coercion and the difference between == and === in JavaScript.
+
+=> console.log(0 == '0'); uses the abstract equality operator (==), which performs type coercion. 0 is coerced to '0', so the comparison is true: true<br>
+=> console.log(0 === '0'); uses the strict equality operator (===), which does not perform type coercion. Since 0 is a number and '0' is a string, the comparison is false: false<br>
+=> console.log(null == undefined); uses the abstract equality operator. null and undefined are considered equal when using ==: true<br>
+=> console.log(null === undefined); uses the strict equality operator. Since null and undefined are different types, the comparison is false: false<br>
+
+---------------------------
+``` js 
+true
+false
+true
+false
+```
+---------------------------
+
 Q: What is a promise in JavaScript?
 
 Ans: A promise is an object representing the eventual completion or failure of an asynchronous operation.
