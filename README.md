@@ -18,6 +18,7 @@
 - [About the Project](#about-the-project)
 - [Getting Started](#getting-started)
 - [JavaScript Notes Table of Contents](#javascript-notes-table-of-contents)
+- [Extras](#extras)
 - [Contributing](#contributing)
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -65,10 +66,14 @@ To get started with these JavaScript notes, simply browse through the table of c
 22. [for...of Loop in JavaScript](https://github.com/vibhuthakur9911/javascript_notes/tree/main/21_for_of_loops_in_Js)
 23. [for...in loop in JavaScript](https://github.com/vibhuthakur9911/javascript_notes/tree/main/22_for_in_loop_in_Js)
 24. [forEach (Higher-Order Array Methods ) in Javascript](https://github.com/vibhuthakur9911/javascript_notes/tree/main/23_foreach_in_js)
+25. [Filter, map and reduce method in JavaScript](https://github.com/vibhuthakur9911/javascript_notes/tree/main/24_map_filter_and_reduce_in_Js)
 
 Feel free to explore each section for detailed explanations and examples. Happy coding! 🖥️💻
 
+## Extras
 
+> [!IMPORTANT]
+> [JavaScript Tricky interview questions for better knowledge](https://github.com/vibhuthakur9911/javascript_notes/tree/main/Js%20Tricky%20Interviews%20Question)
 
 <!-- CONTRIBUTING -->
 ## Contributing
