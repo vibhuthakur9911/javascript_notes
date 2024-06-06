@@ -325,10 +325,10 @@ myfunc();
 ``` js
 // Guess the output of the following code.
 const myObj = { 
-  name: "John",
-   age: 30
+  name: "Vaibhav",
+   age: 22
 }; 
- const {name, age } = obj; 
+ const {name, age } = myObj; 
 console.log(name + ", " + age);
 
 // Ans : Vaibhav 22
