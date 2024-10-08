@@ -13,7 +13,7 @@
 </p>
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+### Table of Contents
 
 - [About the Project](#about-the-project)
 - [Getting Started](#getting-started)
@@ -21,7 +21,7 @@
 - [Extras](#extras)
 - [Contributing](#contributing)
 <!-- ABOUT THE PROJECT -->
-## About The Project
+### About The Project
 
 JavaScript is one of the most widely used programming languages in the world, powering the interactive and dynamic features of modern websites. Whether you're a beginner or an experienced developer, these JavaScript notes will help you sharpen your skills and unlock new possibilities in web development.
 
@@ -34,13 +34,13 @@ Here's why you should explore this repository:
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+### Getting Started
 
 To get started with these JavaScript notes, simply browse through the table of contents and explore the topics that interest you. Each section contains detailed explanations, examples, and code snippets to help you grasp the concepts effectively.
 
 
 <!-- JAVASCRIPT NOTES TABLE OF CONTENTS -->
-## JavaScript Notes Table of Contents
+### JavaScript Notes Table of Contents
 
 1. [JavaScript Introduction](https://github.com/vibhuthakur9911/javascript_notes/tree/main/00_javascript_introduction)
 2. [JavaScript Comments](https://github.com/vibhuthakur9911/javascript_notes/tree/main/01_javascrpt_comments)
@@ -70,13 +70,12 @@ To get started with these JavaScript notes, simply browse through the table of c
 
 Feel free to explore each section for detailed explanations and examples. Happy coding! 🖥️💻
 
-## Extras
-
+### Extras
 > [!IMPORTANT]
 > [JavaScript Tricky interview questions for better knowledge](https://github.com/vibhuthakur9911/javascript_notes/tree/main/Js%20Tricky%20Interviews%20Question)
 
 <!-- CONTRIBUTING -->
-## Contributing
+### Contributing
 
 Contributions are what make the open-source community such a fantastic place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -85,3 +84,15 @@ Contributions are what make the open-source community such a fantastic place to 
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+
+### How to Use
+
+To get started, open the `index.html` file in your web browser. After the page loads, you can view the output and any console messages by opening the browser's console. Here's how:
+
+> [!TIP]
+> Open the `index.html` file in your browser.
+> Press `F12` (or right-click and select "Inspect") to open the Developer Tools.
+> Navigate to the "Console" tab to see the output.
+
+Happy coding!
