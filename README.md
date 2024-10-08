@@ -92,7 +92,9 @@ To get started, open the `index.html` file in your web browser. After the page l
 
 > [!TIP]
 > Open the `index.html` file in your browser.
+>
 > Press `F12` (or right-click and select "Inspect") to open the Developer Tools.
+>
 > Navigate to the "Console" tab to see the output.
 
 Happy coding!
