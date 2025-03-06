@@ -15,6 +15,8 @@ const course = {
 
 // let { prop1, prop2 } = object;
 
+// console.log(course.courseName);
+
 let { courseName } = course;
 console.log(courseName); // Output: Javascript for beginners
 
@@ -36,6 +38,11 @@ let another_course = {
     country: "India",
   },
 };
+
+console.log(another_course.name);
+console.log(another_course.duration);
+console.log(another_course.instructor.name);
+console.log(another_course.instructor.age);
 
 let {
   name,
